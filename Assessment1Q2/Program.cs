@@ -16,8 +16,8 @@ namespace Assessment1Q2
         {
             double charge = 100, discount = 0, totalPrice;
             string residency;
-
-            Console.WriteLine("Enter place of residency: ");
+            Console.WriteLine("Sligo = 30%, Ireland = 20%, Europe = 10%, Other = 0%");
+            Console.Write("Enter place of residency: ");
             residency = Console.ReadLine().ToLower();
 
             switch (residency)
@@ -36,7 +36,7 @@ namespace Assessment1Q2
                     break;
 
             }
-
+            //If statment to prevent multiplying by 0 so totalprice does not equal 0.
             if(discount > 0)
             {
                 totalPrice = charge - (charge * discount);
@@ -46,7 +46,7 @@ namespace Assessment1Q2
                 totalPrice = charge;
             }
 
-            Console.WriteLine("Your discounted price is: ");
+            Console.WriteLine($"Your discounted price is: {totalPrice} euro");
             Console.ReadLine();
 
             
