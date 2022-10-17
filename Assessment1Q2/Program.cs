@@ -14,13 +14,19 @@ namespace Assessment1Q2
     {
         static void Main(string[] args)
         {
+            //declare variables
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             double charge = 100, discount = 0, totalPrice;
             string residency;
+
+            //display discounts
             Console.WriteLine("Sligo = 30%, Ireland = 20%, Europe = 10%, Other = 0%");
+
+            //userinput
             Console.Write("Enter place of residency: ");
             residency = Console.ReadLine().ToLower();
 
-            switch (residency)
+            switch (residency) //check residency
             {
 
                 case "sligo":
@@ -45,8 +51,9 @@ namespace Assessment1Q2
             {
                 totalPrice = charge;
             }
-
-            Console.WriteLine($"Your discounted price is: {totalPrice} euro");
+             
+            //output
+            Console.WriteLine($"Your discounted price is: {totalPrice}€ ");
             Console.ReadLine();
 
             

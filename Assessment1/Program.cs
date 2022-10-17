@@ -14,11 +14,14 @@ namespace Assessment1
     {
         static void Main(string[] args)
         {
+            //declare variables
             int birthYear;
 
+            //userinput
             Console.Write("Enter birth year: ");
             birthYear = int.Parse(Console.ReadLine());
 
+            //Check if over 18.
             if(birthYear < 2004)
             {
                 Console.WriteLine("You are over 18 therefore you can vote!");

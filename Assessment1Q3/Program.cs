@@ -14,12 +14,13 @@ namespace Assessment1Q3
     {
         static void Main(string[] args)
         {
+            //declare variables
             string results = "WDDLWWDLWW";
-            int totalPoints = 0, wins = 0, draws = 0, losses = 0;
+            int totalPoints = 0, wins = 0, draws = 0, losses = 0; //counters
 
             for (int i = 0; i < 10; i++)
             {
-                char result = results[i];
+                char result = results[i]; //checks each individual character in string results.
 
                 if(result == 'W')
                 {
@@ -36,6 +37,8 @@ namespace Assessment1Q3
                     losses++;
                 }
             }
+
+            //output
             Console.WriteLine($"{wins} wins");
             Console.WriteLine($"{draws} draws");
             Console.WriteLine($"{losses} losses");

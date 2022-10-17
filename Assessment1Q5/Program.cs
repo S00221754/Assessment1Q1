@@ -14,6 +14,28 @@ namespace Assessment1Q5
     {
         static void Main(string[] args)
         {
+
+            //declare variables
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            double salary = 50000;
+
+            //output
+            Console.WriteLine($"{InflationSalary(salary)}€");
+            Console.ReadLine();
         }
+        /// <summary>
+        /// adds the inflation percentage to the salary
+        /// </summary>
+        /// <param name="salary"></param>
+        /// <returns></returns>
+        static double InflationSalary(double salary)
+        {
+            double inflation = 0.1, totalSalary;
+
+            totalSalary = salary + (salary * inflation);
+
+            return totalSalary;
+        }
+
     }
 }

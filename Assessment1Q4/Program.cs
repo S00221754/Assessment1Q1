@@ -15,20 +15,26 @@ namespace Assessment1Q4
     {
         static void Main(string[] args)
         {
+            //filepath
             string filePath = @"C:\Users\s00221754\OneDrive - Atlantic TU\Semester 3\OOP\Assessment1Q1\Assessment1Q4\movieRatings.txt";
-            string[] fields = new string[10];
+
+            //arrays 
+            string[] fields = new string[10]; //fields is user to store the ratings
             string[] scores =  File.ReadAllLines(filePath);
 
+            //declare variables
             string tableFormat = "{0,-25} {1,-15}";
             double rating, avgRating;
             string movieName;
+
             Console.WriteLine(tableFormat, "Movie name", "Avg Rating");
+            
             foreach(string score in scores)
             {
                 fields = score.Split(',');
-                movieName = fields[0];
+                movieName = fields[0]; //movie name is at the start of each line.
                 double totalRating = 0;
-                for (int i = 1; i <= 10; i++)
+                for (int i = 1; i <= 10; i++) //used to read in ratings from 1-10.
                 {
                     rating = int.Parse(fields[i]);
                     totalRating = totalRating + rating;
@@ -36,6 +42,7 @@ namespace Assessment1Q4
 
                 avgRating = totalRating / 10;
 
+                //output
                 Console.WriteLine(tableFormat, fields[0], avgRating);
             }
             Console.ReadLine();
